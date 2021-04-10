@@ -12,12 +12,11 @@ h1 {
   align-items: center;
 }
 
-.container_axis {
+.container__axis {
   width: 80vw;
-  height: 20px;
+  height: 15px;
   background-color: rgb(50, 66, 139);
   color: white;
-  padding: 5px;
   border-radius: 3px;
   -webkit-box-shadow: 0px -12px 20px -4px rgba(50, 66, 139, 0.5);
 	-moz-box-shadow: 0px -12px 20px -4px rgba(50, 66, 139, 0.5);
@@ -26,9 +25,13 @@ h1 {
   align-items: center;
 }
 
-.container_axis--circle {
+.container__axis--circle {
   width: 35px;
   height: 35px;
   border-radius: 50%;
-  background-color: rgb(139, 50, 95);
+  background-color: rgb(50, 66, 139);
+}
+
+.container__axis > div:last-child {
+  padding-left: 5vw; 
 }
