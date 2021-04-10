@@ -53,3 +53,32 @@ h1 {
   background: rgb(127,228,217);
   background: linear-gradient(0deg, rgba(127,228,217,1) 12%, rgba(129,223,227,1) 24%, rgba(114,196,210,1) 44%, rgba(114,196,210,1) 64%, rgba(129,223,227,1) 88%, rgba(127,228,217,1) 91%);
 }
+
+ .popover{
+  padding: 0 10px 3px 10px;
+  background-color: rgb(255, 255, 255);
+  border-color: rgb(50, 66, 139);
+  border-radius: 0%;
+  border-width: 2px;
+  width: 150px;
+  position: absolute;
+  top: 10px;
+}
+
+.popover-header {
+  background-color: rgb(255, 255, 255);
+  color: black;
+  font-size: 12px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.popover-body {
+  color: black;
+  font-size: 12px;
+  padding: 5px;
+  text-align: center;
+}
+
+.popover-arrow{
+}
