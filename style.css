@@ -1,20 +1,34 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  color: rgb(50, 66, 139) !important;
+}
+
 h1 {
   font-style: italic;
   letter-spacing: 2px;
   padding: 20px;
-  color: rgb(50, 66, 139) !important;
 }
 
-.container {
-  height: 80vh;
+section {
+  height: 100%;
+  width: 100%;
   display: flex;
 	justify-content: center;
   align-items: center;
 }
 
-.container__axis {
-  width: 80vw;
-  height: 15px;
+.wrapper {
+  width: 100%;
+  margin: 50px;
+}
+
+.wrapper__axis {
+  height: 20px;
   background-color: rgb(50, 66, 139);
   color: white;
   border-radius: 3px;
@@ -23,9 +37,56 @@ h1 {
 	box-shadow: 0px -12px 20px -4px rgba(50, 66, 139, 0.5);
   display: flex;
   align-items: center;
+  padding-left: 5px;
 }
 
-.container__axis--circle {
+.wrapper__axis--progress-bar {
+  height: 10px;
+  width: 33%;
+  position: absolute;
+  z-index: 2;
+  background: rgb(9,93,116);
+  background: linear-gradient(0deg, rgba(9,93,116,1) 19%, rgba(35,120,186,1) 42%, rgba(50,147,227,1) 61%, rgba(78,174,214,1) 77%, rgba(105,193,235,1) 91%);
+  border-radius: 5px;
+}
+
+.period {
+  z-index: 2;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.wrapper__axis--heartbeat {
+  position: absolute;
+  z-index: 6;
+  width: 7%;
+}
+
+.wrapper__axis--flask {
+  position: absolute;
+  z-index: 5;
+  width: 37%;
+}
+
+.wrapper__axis--calendar {
+  position: absolute;
+  z-index: 4;
+  width: 50%;
+}
+
+.wrapper__axis--graduation {
+  position: absolute;
+  z-index: 3;
+  width: 73%;
+}
+
+.wrapper__axis--gamepad {
+  width: 100%;
+  position: relative;
+  left: 5px;
+}
+
+.wrapper__axis--circle {
   width: 38px;
   height: 38px;
   border-radius: 50%;
@@ -35,11 +96,7 @@ h1 {
   justify-content: center;
 }
 
-.container__axis > div:last-child {
-  padding-left: 5vw; 
-}
-
-.container__axis--circle2 {
+.wrapper__axis--circle2 {
   width: 30px;
   height: 30px;
   border-radius: 50%;
@@ -47,14 +104,56 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 
-.container__axis--circle2:hover {
+.wrapper__axis--circle2:hover {
   background: rgb(127,228,217);
   background: linear-gradient(0deg, rgba(127,228,217,1) 12%, rgba(129,223,227,1) 24%, rgba(114,196,210,1) 44%, rgba(114,196,210,1) 64%, rgba(129,223,227,1) 88%, rgba(127,228,217,1) 91%);
 }
 
- .popover{
+@media (max-width: 640px) {
+  .wrapper {
+    height: 80vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 30px;
+  }
+
+  .wrapper__axis--progress-bar {
+    display: flex;
+    flex-direction: column;
+    width: 0vw;
+    height: 0px;
+  }
+
+  .wrapper__axis--progress-bar > div:last-child {
+    padding-left: 0vw; 
+  }
+
+  .wrapper__axis {
+    width: 0vw;
+    height: 0px;
+  }
+
+  .wrapper__axis--circle {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: rgb(50, 66, 139);
+    margin: 20px 10px 20px 10px;
+  }
+
+  .wrapper__axis--circle2 {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+/* Stylize popover */
+
+ .popover {
   padding: 0 10px 3px 10px;
   background-color: rgb(255, 255, 255);
   border-color: rgb(50, 66, 139);
@@ -80,5 +179,3 @@ h1 {
   text-align: center;
 }
 
-.popover-arrow{
-}
