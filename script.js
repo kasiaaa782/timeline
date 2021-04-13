@@ -1,4 +1,3 @@
-
 window.onload = () => {
   setCurrentDate();
   setProgressBar();
@@ -25,7 +24,7 @@ for (var i = 0; i < tabContent.length; i++) {
 
 //Get id from mouseover to decide which popover to show
 getId = (item) => {
-  $("#icon" + item).popover({ 
+  $(".iconId" + item).popover({ 
     trigger: "hover",
     placement: "top",
     content: tabName[item],
@@ -71,11 +70,11 @@ markIcons = () => {
   var graduation = $('#graduation').outerWidth();
   var gamepad = $('#gamepad').outerWidth();
 
-  (progressBar >= heartbeat) ? $('#icon0').addClass('wrapper__axis--circle-marked') : '';
-  (progressBar >= flask) ? $('#icon1').addClass('wrapper__axis--circle-marked') : '';
-  (progressBar >= calendar) ? $('#icon2').addClass('wrapper__axis--circle-marked') : '';
-  (progressBar >= graduation) ? $('#icon3').addClass('wrapper__axis--circle-marked') : '';
-  (progressBar == gamepad) ? $('#icon4').addClass('wrapper__axis--circle-marked') : '';
+  (progressBar >= heartbeat) ? $('.iconId0').addClass('wrapper__axis--circle-marked') : '';
+  (progressBar >= flask) ? $('.iconId1').addClass('wrapper__axis--circle-marked') : '';
+  (progressBar >= calendar) ? $('.iconId2').addClass('wrapper__axis--circle-marked') : '';
+  (progressBar >= graduation) ? $('.iconId3').addClass('wrapper__axis--circle-marked') : '';
+  (progressBar == gamepad) ? $('.iconId4').addClass('wrapper__axis--circle-marked') : '';
 }
 
-console.log(screen.width)
+
