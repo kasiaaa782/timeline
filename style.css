@@ -42,10 +42,8 @@ section {
 
 .wrapper__axis--progress-bar {
   height: 10px;
-  width: 33%;
   position: absolute;
   z-index: 2;
-  background: rgb(9,93,116);
   background: linear-gradient(0deg, rgba(9,93,116,1) 19%, rgba(35,120,186,1) 42%, rgba(50,147,227,1) 61%, rgba(78,174,214,1) 77%, rgba(105,193,235,1) 91%);
   border-radius: 5px;
 }
@@ -59,29 +57,24 @@ section {
 .wrapper__axis--heartbeat {
   position: absolute;
   z-index: 6;
-  width: 7%;
 }
 
 .wrapper__axis--flask {
   position: absolute;
   z-index: 5;
-  width: 37%;
 }
 
 .wrapper__axis--calendar {
   position: absolute;
   z-index: 4;
-  width: 50%;
 }
 
 .wrapper__axis--graduation {
   position: absolute;
   z-index: 3;
-  width: 73%;
 }
 
 .wrapper__axis--gamepad {
-  width: 100%;
   position: relative;
   left: 5px;
 }
@@ -96,7 +89,7 @@ section {
   justify-content: center;
 }
 
-.wrapper__axis--circle2 {
+.wrapper__axis--circle-inside {
   width: 30px;
   height: 30px;
   border-radius: 50%;
@@ -107,48 +100,17 @@ section {
   cursor: pointer;
 }
 
-.wrapper__axis--circle2:hover {
+.wrapper__axis--circle-marked {
+  background: linear-gradient(0deg, rgba(9,93,116,1) 19%, rgba(35,120,186,1) 42%, rgba(50,147,227,1) 61%, rgba(78,174,214,1) 77%, rgba(105,193,235,1) 91%);
+}
+
+.wrapper__axis--circle-inside:hover {
   background: rgb(127,228,217);
   background: linear-gradient(0deg, rgba(127,228,217,1) 12%, rgba(129,223,227,1) 24%, rgba(114,196,210,1) 44%, rgba(114,196,210,1) 64%, rgba(129,223,227,1) 88%, rgba(127,228,217,1) 91%);
 }
 
 @media (max-width: 640px) {
-  .wrapper {
-    height: 80vh;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    padding: 30px;
-  }
-
-  .wrapper__axis--progress-bar {
-    display: flex;
-    flex-direction: column;
-    width: 0vw;
-    height: 0px;
-  }
-
-  .wrapper__axis--progress-bar > div:last-child {
-    padding-left: 0vw; 
-  }
-
-  .wrapper__axis {
-    width: 0vw;
-    height: 0px;
-  }
-
-  .wrapper__axis--circle {
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    background-color: rgb(50, 66, 139);
-    margin: 20px 10px 20px 10px;
-  }
-
-  .wrapper__axis--circle2 {
-    width: 35px;
-    height: 35px;
-  }
+  
 }
 
 /* Stylize popover */
