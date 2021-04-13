@@ -3,6 +3,7 @@ window.onload = () => {
   setCurrentDate();
   setProgressBar();
   setIcons();
+  markIcons();
 }
 
 var tabContent = [
@@ -61,3 +62,20 @@ setWidthPercent = (date) => {
   var percent = day * 100 / 30;
   return percent + '%';
 }
+
+markIcons = () => {
+  var progressBar = $('#progress-bar').outerWidth();
+  var heartbeat = $('#heartbeat').outerWidth();
+  var flask = $('#flask').outerWidth();
+  var calendar = $('#calendar').outerWidth();
+  var graduation = $('#graduation').outerWidth();
+  var gamepad = $('#gamepad').outerWidth();
+
+  (progressBar >= heartbeat) ? $('#icon0').addClass('wrapper__axis--circle-marked') : '';
+  (progressBar >= flask) ? $('#icon1').addClass('wrapper__axis--circle-marked') : '';
+  (progressBar >= calendar) ? $('#icon2').addClass('wrapper__axis--circle-marked') : '';
+  (progressBar >= graduation) ? $('#icon3').addClass('wrapper__axis--circle-marked') : '';
+  (progressBar == gamepad) ? $('#icon4').addClass('wrapper__axis--circle-marked') : '';
+}
+
+console.log(screen.width)
