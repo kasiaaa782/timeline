@@ -114,16 +114,20 @@ section {
 /* Responsive version */
 
 @media all and (max-width: 480px) {
-  .wrapper {
-    display: none;
-  }
-
   section {
     align-items: flex-start;
   }
 
   body {
     color: rgb(7, 19, 75) !important;
+  }
+
+  header {
+    display: none;
+  }
+  
+  .wrapper {
+    display: none;
   }
 }
 

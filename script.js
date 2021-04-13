@@ -24,7 +24,7 @@ for (var i = 0; i < tabContent.length; i++) {
 }
 
 /**
- * Comment: Get id from mouseover to decide which popover to show
+ * Comment: Get id from mouseover function to decide which popover to show
  */ 
 getId = (item) => {
   $("#icon" + item).popover({ 
