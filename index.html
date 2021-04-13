@@ -1,6 +1,5 @@
 <!DOCTYPE HTML>
 <html lang="pl">
-
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,37 +33,57 @@
     <div class="responsive">
       <div class="responsive__block">
         <div class="responsive__block--circle">
-          <div class="iconId0 responsive__block--circle-inside">
+          <div class="icon0 responsive__block--circle-inside">
             <i class="fas fa-heartbeat fa-2x"></i>
           </div>
         </div>
+        <div class="responsive__block--content">
+          <div id="date0"></div>
+          <div id="text0"></div>
+        </div>
       </div>
       <div class="responsive__block">
         <div class="responsive__block--circle">
-          <div class="iconId1 responsive__block--circle-inside">
+          <div class="icon1 responsive__block--circle-inside">
             <i class="fas fa-flask fa-2x"></i>
           </div>
         </div>
+        <div class="responsive__block--content">
+          <div id="date1"></div>
+          <div id="text1"></div>
+        </div>
       </div>
       <div class="responsive__block">
         <div class="responsive__block--circle">
-          <div class="iconId2 responsive__block--circle-inside">
+          <div class="icon2 responsive__block--circle-inside">
             <i class="fas fa-calendar-plus fa-2x"></i>
           </div>
         </div>
-      </div>
-      <div class="responsive__block">
-        <div class="responsive__block--circle">
-          <div class="iconId3 responsive__block--circle-inside">
-            <i class="fas fa-graduation-cap fa-2x"></i>
-          </div>
+        <div class="responsive__block--content">
+          <div id="date2"></div>
+          <div id="text2"></div>
         </div>
       </div>
       <div class="responsive__block">
         <div class="responsive__block--circle">
-          <div class="iconId4 responsive__block--circle-inside">
+          <div class="icon3 responsive__block--circle-inside">
+            <i class="fas fa-graduation-cap fa-2x"></i>
+          </div>
+        </div>
+        <div class="responsive__block--content">
+          <div id="date3"></div>
+          <div id="text3"></div>
+        </div>
+      </div>
+      <div class="responsive__block">
+        <div class="responsive__block--circle">
+          <div class="icon4 responsive__block--circle-inside">
             <i class="fas fa-gamepad fa-2x"></i>
           </div>
+        </div>
+        <div class="responsive__block--content">
+          <div id="date4"></div>
+          <div id="text4"></div>
         </div>
       </div>
     </div>
@@ -73,35 +92,35 @@
         <div id="progress-bar" class="wrapper__axis--progress-bar"></div>
         <div id="heartbeat" class="wrapper__axis--heartbeat wrapper__axis--period">
           <div class="wrapper__axis--circle">
-            <div class="iconId0 wrapper__axis--circle-inside" onmouseover="getId(0)" data-toggle="popover" data-trigger="hover">
+            <div id="icon0" class="icon0 wrapper__axis--circle-inside" onmouseover="getId(0)" data-toggle="popover" data-trigger="hover">
               <i class="fas fa-heartbeat"></i>
             </div>
           </div>
         </div>
         <div id="flask" class="wrapper__axis--flask wrapper__axis--period">
           <div class="wrapper__axis--circle">
-            <div class="iconId1 wrapper__axis--circle-inside" onmouseover="getId(1)" data-toggle="popover" data-trigger="hover">
+            <div id="icon1" class="icon1 wrapper__axis--circle-inside" onmouseover="getId(1)" data-toggle="popover" data-trigger="hover">
               <i class="fas fa-flask"></i>
             </div>
           </div>
         </div>
         <div id="calendar" class="wrapper__axis--calendar wrapper__axis--period">
           <div class="wrapper__axis--circle">
-            <div class="iconId2 wrapper__axis--circle-inside" onmouseover="getId(2)" data-toggle="popover" data-trigger="hover">
+            <div id="icon2" class="icon2 wrapper__axis--circle-inside" onmouseover="getId(2)" data-toggle="popover" data-trigger="hover">
               <i class="fas fa-calendar-plus"></i>
             </div>
           </div>
         </div>
         <div id="graduation" class="wrapper__axis--graduation wrapper__axis--period">
           <div class="wrapper__axis--circle">
-            <div class="iconId3 wrapper__axis--circle-inside" onmouseover="getId(3)" data-toggle="popover" data-trigger="hover">
+            <div id="icon3" class="icon3 wrapper__axis--circle-inside" onmouseover="getId(3)" data-toggle="popover" data-trigger="hover">
               <i class="fas fa-graduation-cap"></i>
             </div>
           </div>
         </div>
         <div id="gamepad" class="wrapper__axis--gamepad wrapper__axis--period">
           <div class="wrapper__axis--circle">
-            <div class="iconId4 wrapper__axis--circle-inside" onmouseover="getId(4)" data-toggle="popover" data-trigger="hover">
+            <div id="icon4" class="icon4 wrapper__axis--circle-inside" onmouseover="getId(4)" data-toggle="popover" data-trigger="hover">
               <i class="fas fa-gamepad"></i>
             </div>
           </div>

@@ -3,14 +3,15 @@ window.onload = () => {
   setProgressBar();
   setIcons();
   markIcons();
+  setMobileContent();
 }
 
 var tabContent = [
-  ['02.06.2021', 'LOREM IPSUM DOLAR', 'fas fa-heartbeat'],
-  ['11.06.2021', 'LOREM IPSUM DOLAR', 'fas fa-flask'],
-  ['15.06.2021', 'LOREM IPSUM DOLAR', 'far fa-calendar-plus'],
-  ['22.06.2021', 'LOREM IPSUM DOLAR', 'fas fa-graduation-cap'],
-  ['30.06.2021', 'LOREM IPSUM DOLAR', 'fas fa-gamepad']
+  ['02.06.2021', 'LOREM IPSUM DOLOR', 'fas fa-heartbeat'],
+  ['11.06.2021', 'LOREM IPSUM DOLOR', 'fas fa-flask'],
+  ['15.06.2021', 'LOREM IPSUM DOLOR', 'far fa-calendar-plus'],
+  ['22.06.2021', 'LOREM IPSUM DOLOR', 'fas fa-graduation-cap'],
+  ['30.06.2021', 'LOREM IPSUM DOLOR', 'fas fa-gamepad']
 ];
 var tabDate = [];
 var tabName = [];
@@ -22,9 +23,11 @@ for (var i = 0; i < tabContent.length; i++) {
   tabName.push(tabContent[i][1]);
 }
 
-//Get id from mouseover to decide which popover to show
+/**
+ * Comment: Get id from mouseover to decide which popover to show
+ */ 
 getId = (item) => {
-  $(".iconId" + item).popover({ 
+  $("#icon" + item).popover({ 
     trigger: "hover",
     placement: "top",
     content: tabName[item],
@@ -70,11 +73,16 @@ markIcons = () => {
   var graduation = $('#graduation').outerWidth();
   var gamepad = $('#gamepad').outerWidth();
 
-  (progressBar >= heartbeat) ? $('.iconId0').addClass('wrapper__axis--circle-marked') : '';
-  (progressBar >= flask) ? $('.iconId1').addClass('wrapper__axis--circle-marked') : '';
-  (progressBar >= calendar) ? $('.iconId2').addClass('wrapper__axis--circle-marked') : '';
-  (progressBar >= graduation) ? $('.iconId3').addClass('wrapper__axis--circle-marked') : '';
-  (progressBar == gamepad) ? $('.iconId4').addClass('wrapper__axis--circle-marked') : '';
+  (progressBar >= heartbeat) ? $('.icon0').addClass('wrapper__axis--circle-marked') : '';
+  (progressBar >= flask) ? $('.icon1').addClass('wrapper__axis--circle-marked') : '';
+  (progressBar >= calendar) ? $('.icon2').addClass('wrapper__axis--circle-marked') : '';
+  (progressBar >= graduation) ? $('.icon3').addClass('wrapper__axis--circle-marked') : '';
+  (progressBar == gamepad) ? $('.icon4').addClass('wrapper__axis--circle-marked') : '';
 }
 
-
+setMobileContent = () => {
+  for(var i=0; i<tabContent.length; i++){
+    $('#date' + i).html(tabDate[i]);
+    $('#text' + i).html(tabName[i]);
+  }
+}
